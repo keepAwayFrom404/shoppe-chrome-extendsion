@@ -1,0 +1,26 @@
+{
+  "name": "shoppe-chrome-extendsion",
+  "version": "1.0.0",
+  "description": "基于虾皮电商过程中碰到的问题写的一个提效插件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keepAwayFrom404/shoppe-chrome-extendsion.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keepAwayFrom404/shoppe-chrome-extendsion/issues"
+  },
+  "homepage": "https://github.com/keepAwayFrom404/shoppe-chrome-extendsion#readme",
+  "dependencies": {
+    "chrome-types": "^0.1.246"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.254"
+  }
+}

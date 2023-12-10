@@ -1,0 +1,25 @@
+{
+  "name": "跨境电商工具箱",
+  "description" : "电商小助手，给您疯狂提效。",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "popup.jpg"
+  },
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+X",
+        "mac": "MacCtrl+Shift+X"
+      },
+      "description": "Opens popup.html"
+    }
+  },
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": true
+  },
+  "permissions": ["storage", "declarativeContent", "activeTab"]
+}
