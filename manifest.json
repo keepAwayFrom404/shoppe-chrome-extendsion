@@ -4,9 +4,17 @@
   "version": "1.0",
   "manifest_version": 2,
   "browser_action": {
+    "default_icon": "src/assets/icon.png",
     "default_popup": "popup.html",
-    "default_icon": "popup.jpg"
+    "default_title": "跨境电商工具箱"
   },
+  "homepage_url": "https://www.baidu.com",
+  "icons":
+	{
+		"16": "src/assets/icon.png",
+		"48": "src/assets/icon.png",
+		"128": "src/assets/icon.png"
+	},
   "commands": {
     "_execute_browser_action": {
       "suggested_key": {
@@ -19,7 +27,16 @@
   "options_page": "options.html",
   "background": {
     "scripts": ["src/background.js"],
-    "persistent": true
+    "persistent": false
   },
-  "permissions": ["storage", "declarativeContent", "activeTab"]
+  "content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["src/js/data.min.js", "src/js/data.cn2t.min.js", "src/js/data.t2cn.min.js", "src/js/bundle-browser.min.js", "src/js/index.js"],
+			"css": ["src/css/index.css"],
+			"run_at": "document_idle"
+		}
+	],
+  "web_accessible_resources": ["src/js/index.js"],
+  "permissions": ["storage", "declarativeContent", "activeTab","contextMenus"]
 }
